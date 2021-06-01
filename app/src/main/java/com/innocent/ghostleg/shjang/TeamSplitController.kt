@@ -1,6 +1,6 @@
 package com.innocent.ghostleg.shjang
 
-object TeamSpliteController {
+object TeamSplitController {
     fun splitTeam(members: Array<String>): Array<Array<String>> {
         members.shuffle();
         val firstTeamSize = Math.ceil((members.size / 2).toDouble()).toInt();
