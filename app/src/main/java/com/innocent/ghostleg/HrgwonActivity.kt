@@ -23,6 +23,7 @@ class HrgwonActivity : AppCompatActivity() {
             addTextView()
         }
 
+        // 푸시가 잘 되는지 확인하기 위한 주석
         binding.btnDecrease.setOnClickListener {
             println("num은 $num , textList size는 $textList.size")
             if (checkValid(num - 1)) {
