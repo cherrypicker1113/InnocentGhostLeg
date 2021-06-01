@@ -31,7 +31,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.shjang.setOnClickListener {
-
+            val intent = Intent(this, ShjangActivity::class.java)
+            startActivity(intent)
         }
 
         binding.yckim.setOnClickListener {
@@ -65,5 +66,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
     }
 }
