@@ -1,91 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HrgwonActivity"
-    android:layout_margin="30dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".HrgwonActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:paddingHorizontal="30dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginVertical="30dp"
+        android:paddingHorizontal="30dp">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="인원수"
-            android:textSize="20sp"
             android:gravity="center"
-            />
+            android:text="인원수"
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
             android:gravity="center"
-            >
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnDecrease"
-                android:layout_width="30dp"
+                android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="left"
                 android:layout_marginHorizontal="20dp"
-                android:text="-"
-                />
+                android:text="-" />
 
             <TextView
                 android:id="@+id/tvNum"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="5"
-                android:gravity="center"
-                android:textSize="20sp"
                 android:background="@android:color/transparent"
-                />
+                android:gravity="center"
+                android:text="5"
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="명"
-                android:textSize="20sp"
                 android:gravity="center"
-                />
+                android:text="명"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btnIncrease"
-                android:layout_width="30dp"
+                android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="20dp"
-                android:text="+"
-                />
+                android:text="+" />
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/textListLinearLayout"
+    <GridView
+        android:id="@+id/gridView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"/>
+        android:layout_height="wrap_content"
+        android:background="#E8DAC9"
+        android:padding="30dp"
+        android:numColumns="2"/>
 
     <Button
         android:id="@+id/btnBack"
-        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
         android:width="100dp"
         android:height="60dp"
-        android:text="뒤로"
-        />
+        android:text="뒤로" />
 
 </LinearLayout>
