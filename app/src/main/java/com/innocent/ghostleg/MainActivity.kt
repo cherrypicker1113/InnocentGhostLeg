@@ -27,7 +27,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.hrgwon.setOnClickListener {
-
+            val intent = Intent(this, HrgwonActivity::class.java)
+            startActivity(intent)
         }
 
         binding.shjang.setOnClickListener {
