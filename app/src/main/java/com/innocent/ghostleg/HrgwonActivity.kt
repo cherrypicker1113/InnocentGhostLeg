@@ -12,7 +12,7 @@ class HrgwonActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHrgwonBinding.inflate(layoutInflater)
 
-        binding.btnBack.setOnClickListener {
+        binding.btnPlay.setOnClickListener {
             finish()
         }
 
@@ -21,7 +21,7 @@ class HrgwonActivity : AppCompatActivity() {
 
         num = Integer.parseInt(binding.tvNum.text.toString())
         for(i in 0 until num) {
-            adapter.addItem(Data(adapter.getCount() + 1, "이름"))
+            adapter.addItem(Data(adapter.getCount() + 1, ""))
         }
 
         // 푸시가 잘 되는지 확인하기 위한 주석
@@ -35,7 +35,7 @@ class HrgwonActivity : AppCompatActivity() {
         binding.btnIncrease.setOnClickListener {
             if (checkValid(num + 1)) {
                 updateNumber(num + 1)
-                adapter.addItem(Data(adapter.getCount() + 1, "이름"))
+                adapter.addItem(Data(adapter.getCount() + 1, ""))
             }
         }
 
