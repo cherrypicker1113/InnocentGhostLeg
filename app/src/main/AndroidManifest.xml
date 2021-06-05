@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InnocentGhostLeg">
         <activity android:name=".ShjangActivity"></activity>
+        <activity android:name=".HrgwonActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

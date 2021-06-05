@@ -3,7 +3,6 @@ package com.innocent.ghostleg
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.Toast
 import com.innocent.ghostleg.databinding.ActivityMainBinding
 
@@ -20,14 +19,9 @@ class MainActivity : AppCompatActivity() {
          */
         binding = ActivityMainBinding.inflate(layoutInflater)
 
-        binding.toggleButton.setOnClickListener {
-            val view: Button = it as Button
-            view.text = view.text.reversed()
-            binding.toggleText.text = binding.toggleText.text.reversed()
-        }
-
         binding.hrgwon.setOnClickListener {
-
+            val intent = Intent(this, HrgwonActivity::class.java)
+            startActivity(intent)
         }
 
         binding.shjang.setOnClickListener {
@@ -61,8 +55,8 @@ class MainActivity : AppCompatActivity() {
             yckimActivityRequestId -> {
                 val receiveMsg = data?.getStringExtra(YckimActivity.RESULT_KEY).toString()
                 if (receiveMsg.isNotBlank()) {
-                    Toast.makeText(this, "버튼 이름 변경됨.\n" + binding.yckim.text + " -> " + receiveMsg, Toast.LENGTH_SHORT).show()
-                    binding.yckim.text = receiveMsg
+//                    Toast.makeText(this, "버튼 이름 변경됨.\n" + binding.yckim.text + " -> " + receiveMsg, Toast.LENGTH_SHORT).show()
+//                    binding.yckim.text = receiveMsg
                 }
             }
         }
