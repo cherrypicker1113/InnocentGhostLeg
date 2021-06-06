@@ -5,18 +5,30 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.innocent.ghostleg.databinding.DrawLotsPlayFragmentBinding
+import com.innocent.ghostleg.databinding.FragmentDrawLotsPlayBinding
 
 class DrawLotsPlayFragment: Fragment() {
-    private lateinit var binding: DrawLotsPlayFragmentBinding
+    private lateinit var binding: FragmentDrawLotsPlayBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = DrawLotsPlayFragmentBinding.inflate(inflater, container, false)
+    ): View {
+        binding = FragmentDrawLotsPlayBinding.inflate(inflater, container, false)
         binding.play.text = arguments!!.getInt(LOTS_COUNT_KEY).toString()
+        binding.test.setOnClickListener {
+            val resultFragment = DrawLotsResultFragment()
+            val bundle = Bundle()
+            bundle.putBoolean(DrawLotsResultFragment.RESULT_KEY, Math.random() > 0.5)
+            resultFragment.arguments = bundle
+            val transaction = fragmentManager!!.beginTransaction()
+            val prevDialog = fragmentManager!!.findFragmentByTag("dialog")
+            if (prevDialog != null) {
+                transaction.remove(resultFragment)
+            }
+            resultFragment.show(transaction, "dialog")
+        }
         return binding.root
     }
 
