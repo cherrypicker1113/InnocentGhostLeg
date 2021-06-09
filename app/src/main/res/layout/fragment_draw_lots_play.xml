@@ -7,20 +7,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:gravity="center">
 
-        <TextView
-            android:id="@+id/play"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:id="@+id/drawLotsList"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:gravity="center"
+            android:orientation="horizontal"/>
 
         <Button
-            android:id="@+id/test"
+            android:id="@+id/shakeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="랜덤 결과"
-            />
-
+            android:text="shake"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

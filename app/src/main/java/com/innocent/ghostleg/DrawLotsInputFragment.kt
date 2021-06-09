@@ -19,7 +19,10 @@ class DrawLotsInputFragment : Fragment() {
     ): View {
         binding = FragmentDrawLotsInputBinding.inflate(inflater, container, false)
         binding.submitButton.setOnClickListener {
-            listener.onEnter(Integer.parseInt(binding.input.text.toString()))
+            listener.onCompleteDrawLotsInput(
+                Integer.parseInt(binding.totalCountInput.text.toString()),
+                Integer.parseInt(binding.selectCountInput.text.toString())
+            )
         }
         return binding.root
     }
@@ -33,5 +36,5 @@ class DrawLotsInputFragment : Fragment() {
 }
 
 interface DrawLotsInputListener {
-    fun onEnter(num: Int)
+    fun onCompleteDrawLotsInput(totalCount: Int, selectCount: Int)
 }

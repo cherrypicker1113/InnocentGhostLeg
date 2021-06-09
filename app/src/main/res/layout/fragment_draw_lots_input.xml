@@ -9,23 +9,25 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
-        <TextView
-            android:id="@+id/hello"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
         <EditText
-            android:id="@+id/input"
+            android:id="@+id/totalCountInput"
+            android:text="4"
             android:inputType="text"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:autofillHints="아무거나 입력해보세요" />
+            android:layout_height="50dp" />
+
+        <EditText
+            android:id="@+id/selectCountInput"
+            android:text="2"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
 
         <Button
             android:id="@+id/submitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="확인" />
+            android:text="시작" />
 
     </LinearLayout>
 

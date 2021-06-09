@@ -15,9 +15,10 @@ class DrawLotsActivity : AppCompatActivity(), DrawLotsInputListener {
         supportFragmentManager.beginTransaction().replace(binding.frameLayout.id, DrawLotsInputFragment()).commit()
     }
 
-    override fun onEnter(num: Int) {
+    override fun onCompleteDrawLotsInput(totalCount: Int, selectCount: Int) {
         val bundle = Bundle(1)
-        bundle.putInt(DrawLotsPlayFragment.LOTS_COUNT_KEY, num)
+        bundle.putInt(DrawLotsPlayFragment.TOTAL_COUNT_KEY, totalCount)
+        bundle.putInt(DrawLotsPlayFragment.SELECT_COUNT_KEY, selectCount)
         val fragment = DrawLotsPlayFragment()
         fragment.arguments = bundle
         supportFragmentManager.beginTransaction().replace(binding.frameLayout.id, fragment).commit()
