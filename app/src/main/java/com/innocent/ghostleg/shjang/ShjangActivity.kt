@@ -3,7 +3,6 @@ package com.innocent.ghostleg
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.innocent.ghostleg.databinding.ActivityShjangBinding
-import com.innocent.ghostleg.shjang.TeamSplitController
 
 class ShjangActivity : AppCompatActivity() {
     private lateinit var binding: ActivityShjangBinding
@@ -33,9 +32,6 @@ class ShjangActivity : AppCompatActivity() {
             for (i in 1..countOfPeople) {
                 members[i - 1] = ("장수홍" + i.toString())
             }
-            val team = TeamSplitController.splitTeam(members)
-            binding.textViewTeam1.text = team[0].joinToString("\n")
-            binding.textViewTeam2.text = team[1].joinToString("\n")
         }
 
         setContentView(binding.root)
