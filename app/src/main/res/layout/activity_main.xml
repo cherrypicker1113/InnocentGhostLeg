@@ -1,61 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
+
+    <include
+        layout="@layout/layout_menubar"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center_horizontal" >
-
-        <TextView
-            android:id="@+id/toggleText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.476"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.133" />
-
-        <Button
-            android:id="@+id/toggleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="토글" />
+        android:layout_margin="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
             android:gravity="center_horizontal" >
 
-            <Button
-                android:id="@+id/hrgwon"
-                android:layout_width="219dp"
-                android:layout_height="71dp"
-                android:text="해" />
-
-            <Button
+            <ImageView
+                style="@style/MainImageViewTheme"
                 android:id="@+id/shjang"
-                android:layout_width="219dp"
-                android:layout_height="71dp"
-                android:text="수" />
+                android:src="@drawable/btn_shjang"
+                />
 
-            <Button
-                android:id="@+id/yckim"
-                android:layout_width="219dp"
-                android:layout_height="71dp"
-                android:text="용" />
+            <ImageView
+                style="@style/MainImageViewTheme"
+                android:id="@+id/hrgwon"
+                android:src="@drawable/btn_hrgwon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal" >
+
+            <ImageView
+                style="@style/MainImageViewTheme"
+                android:id="@+id/drawLotsButton"
+                android:src="@drawable/btn_yckim"
+                />
+
+            <ImageView
+                style="@style/MainImageViewTheme"
+                android:id="@+id/setting"
+                android:src="@drawable/btn_setting"
+                />
 
         </LinearLayout>
 
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
