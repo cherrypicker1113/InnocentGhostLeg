@@ -46,7 +46,7 @@
 
             <ImageView
                 style="@style/MainImageViewTheme"
-                android:id="@+id/yckim"
+                android:id="@+id/drawLotsButton"
                 android:src="@drawable/btn_yckim"
                 />
 
