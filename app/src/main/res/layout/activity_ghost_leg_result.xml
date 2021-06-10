@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#CDC4BC"
     android:orientation="vertical"
-    tools:context=".ShjangActivity">
+    tools:context=".GhostLegResultActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,12 +38,16 @@
         android:layout_height="300dp"
         android:background="#E6DDD1"
         android:orientation="horizontal">
-        <ImageView
-            android:layout_width="wrap_content"
+        <GridView
+            android:id="@+id/gridResultGhostLeg"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/MainImageViewTheme"
-            android:id="@+id/hrgwon"
-            android:src="@drawable/img_temp_ghostleg"/>
+            android:background="@drawable/btn_radius"
+            android:layout_margin="30dp"
+            android:numColumns="2"
+            android:paddingHorizontal="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" />
 
     </LinearLayout>
 
@@ -54,10 +58,10 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnDoGhostLeg"
+            android:id="@+id/btnRefresh"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="사다리 타기"
+            android:text="다시하기"
             android:textAllCaps="false" />
 
         <LinearLayout
@@ -66,5 +70,4 @@
             android:orientation="horizontal">
         </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>

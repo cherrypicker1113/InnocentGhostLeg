@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.InnocentGhostLeg">
-        <activity android:name=".ShjangActivity"></activity>
-        <activity android:name=".HrgwonActivity"></activity>
+        <activity android:name=".GhostLegResultActivity"></activity>
+        <activity android:name=".ShjangActivity" />
+        <activity android:name=".HrgwonActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
