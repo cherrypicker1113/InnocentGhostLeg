@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".drawlots.DrawLotsActivity">
+
+    <include layout="@layout/layout_menubar"/>
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -9,4 +15,4 @@
         android:layout_height="match_parent">
     </FrameLayout>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

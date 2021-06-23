@@ -1,26 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
+        android:id="@+id/topBoard"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/top_board_background">
 
-        <LinearLayout
-            android:id="@+id/drawLotsList"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:gravity="center"
-            android:orientation="horizontal"/>
-
-        <Button
-            android:id="@+id/shakeButton"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="shake"/>
+            android:textColor="#8A6D76"
+            android:textSize="20dp"
+            android:text="남은 수 : "/>
+
+        <TextView
+            android:id="@+id/lotsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#8A6D76"
+            android:textSize="20dp"
+            android:text="0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#8A6D76"
+            android:textSize="20dp"
+            android:text=",  당첨 수 : "/>
+
+        <TextView
+            android:id="@+id/winCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#8A6D76"
+            android:textSize="20dp"
+            android:text="0"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lots"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginBottom="230dp"
+        android:gravity="center_horizontal"
+        android:weightSum="12"
+        app:layout_constraintBottom_toBottomOf="@id/shakeCup">
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#000"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#8739"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#000"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#8739"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#000"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#8739"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#000"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#8739"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/shakeCup"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/shake_cup"/>
+
+    <LinearLayout
+        android:id="@+id/restartButton"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/topBoard"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/restart_button"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:text="다시 하기"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
