@@ -24,18 +24,6 @@
         </LinearLayout>
 
         <com.innocent.ghostleg.common.ExpandableHeightGridView
-            android:id="@+id/memberListView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:background="@drawable/btn_radius"
-            android:horizontalSpacing="30dp"
-            android:numColumns="2"
-            android:paddingHorizontal="50dp"
-            android:paddingTop="20dp"
-            android:paddingBottom="30dp" />
-
-        <com.innocent.ghostleg.common.ExpandableHeightGridView
             android:id="@+id/winnerListView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
