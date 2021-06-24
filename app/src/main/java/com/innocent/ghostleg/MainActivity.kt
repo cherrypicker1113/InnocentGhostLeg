@@ -3,8 +3,8 @@ package com.innocent.ghostleg
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.innocent.ghostleg.databinding.ActivityMainBinding
+import com.innocent.ghostleg.drawlots.DrawLotsActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

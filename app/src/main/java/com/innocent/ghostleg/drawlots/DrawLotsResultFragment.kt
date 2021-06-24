@@ -1,5 +1,6 @@
-package com.innocent.ghostleg
+package com.innocent.ghostleg.drawlots
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.support.v4.app.DialogFragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import com.innocent.ghostleg.databinding.FragmentDrawLotsResultBinding
 
 class DrawLotsResultFragment: DialogFragment() {
     private lateinit var binding: FragmentDrawLotsResultBinding
+    private var listener: DrawLotsResultListener? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -16,8 +18,19 @@ class DrawLotsResultFragment: DialogFragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentDrawLotsResultBinding.inflate(inflater, container, false)
-        binding.result.text = if (arguments!!.getBoolean(RESULT_KEY)) "당첨" else "꽝"
+        binding.result.text = arguments!!.getString(RESULT_KEY)
+        binding.root.setOnClickListener { dismiss() }
         return binding.root
+    }
+
+    override fun onDismiss(dialog: DialogInterface?) {
+        super.onDismiss(dialog)
+        listener?.onCloseDrawLotsResult()
+    }
+
+    fun setListener(listener: DrawLotsResultListener): DrawLotsResultFragment {
+        this.listener = listener
+        return this
     }
 
     /**
@@ -32,4 +45,8 @@ class DrawLotsResultFragment: DialogFragment() {
          */
         const val RESULT_KEY: String = "result"
     }
+}
+
+interface DrawLotsResultListener {
+    fun onCloseDrawLotsResult()
 }
