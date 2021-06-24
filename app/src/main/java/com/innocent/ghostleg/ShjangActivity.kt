@@ -4,10 +4,10 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.innocent.ghostleg.databinding.ActivityShjangBinding
+import com.innocent.ghostleg.ladder.LadderDrawingActivity
 
 class ShjangActivity : AppCompatActivity() {
     private lateinit var binding: ActivityShjangBinding
-    private var countOfPeople = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +18,7 @@ class ShjangActivity : AppCompatActivity() {
         }
 
         binding.btnDoGhostLeg.setOnClickListener {
-            val intent = Intent(this, GhostLegResultActivity::class.java)
+            val intent = Intent(this, LadderDrawingActivity::class.java)
             startActivity(intent)
         }
 
