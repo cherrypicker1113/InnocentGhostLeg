@@ -117,6 +117,6 @@ class Ladder: Serializable {
     }
 
     fun getLadderCount(count: Int): Int {
-        return count * 2 - 3
+        return Math.max(count * 2 - 3, 6)
     }
 }
