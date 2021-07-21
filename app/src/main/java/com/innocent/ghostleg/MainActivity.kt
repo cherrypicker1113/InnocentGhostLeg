@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.shjang.setOnClickListener {
-            val intent = Intent(this, ShjangActivity::class.java)
+            val intent = Intent(this, GhostLegActivity::class.java)
             startActivity(intent)
         }
 
